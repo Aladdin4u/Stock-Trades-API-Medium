@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.1260" tests="13" failures="3">
+  <testsuite name="Root Suite" timestamp="2023-05-12T20:18:55" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="stock_trades_api_medium" timestamp="2023-05-12T20:18:55" tests="13" file="C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js" time="8.1260" failures="3">
+    <testcase name="stock_trades_api_medium should create a new trade of buy type" time="0.7680" classname="should create a new trade of buy type">
+    </testcase>
+    <testcase name="stock_trades_api_medium should create a new trade of sell type" time="0.7370" classname="should create a new trade of sell type">
+    </testcase>
+    <testcase name="stock_trades_api_medium should fetch all the trades" time="2.1530" classname="should fetch all the trades">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)]]></failure>
+    </testcase>
+    <testcase name="stock_trades_api_medium should fetch no trades if the type filter value does not exist" time="2.1050" classname="should fetch no trades if the type filter value does not exist">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)]]></failure>
+    </testcase>
+    <testcase name="stock_trades_api_medium &quot;before each&quot; hook for &quot;should fetch all trades for a user&quot;" time="2.3630" classname="&quot;before each&quot; hook for &quot;should fetch all trades for a user&quot;">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\Alaadin\Desktop\8e590e13-83d3-459f-97e4-ed8fb46da043\test\index.spec.js)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
