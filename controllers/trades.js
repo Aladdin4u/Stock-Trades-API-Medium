@@ -5,15 +5,37 @@ module.exports = {
   getTrades: async (req, res, next) => {
     let filter = {};
     let q = req.query;
-    if (q.type) {
-      filter = {
-        where: {
-          type: String(q.type),
-          user_id: Number(q.user_id),
-        },
-      };
-    }
     try {
+      if (q.type || q.user_id) {
+        if (q.type && q.user_id) {
+          filter = {
+            where: {
+              [Op.and]: [
+                { type: String(q.type) },
+                { user_id: Number(q.user_id) },
+              ],
+            },
+          };
+          const trades = await db.findAll(filter);
+          return res.json(trades);
+        } else if (q.type) {
+          filter = {
+            where: {
+              type: String(q.type)
+            },
+          };
+          const trades = await db.findAll(filter);
+          return res.json(trades);
+        } else if (q.user_id) {
+          filter = {
+            where: {
+              user_id: Number(q.user_id)
+            },
+          };
+          const trades = await db.findAll(filter);
+          return res.json(trades);
+        }
+      }
       const trades = await db.findAll(filter);
       res.json(trades);
     } catch (error) {
@@ -28,7 +50,7 @@ module.exports = {
       if (trade) {
         res.json(trade);
       } else {
-        res.status(404).json("ID not found");
+        res.status(404).send("ID not found");
       }
     } catch (error) {
       res.status(404).json({ error: error.message });
